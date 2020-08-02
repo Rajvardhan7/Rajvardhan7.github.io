@@ -1,37 +1,36 @@
 <?php
+if (isset($_POST['sendMailBtn'])) {
+    $fromEmail = "dreejwaniofficial@gmail.com";
+	$toEmail = $_POST['email'];
+	$name=$_POST['name'];
+    $subjectName = $_POST['subject'];
+    $message = $_POST['message'];
 
-    $to = "dreejwaniofficial@gmail.com";
-    $from = $_POST['email'];
-    $name = $_POST['name'];
-    $subject = $_POST['subject'];
-    $number = $_POST['number'];
-    $cmessage = $_POST['message'];
+    $to = $toEmail;
+    $subject = $subjectName;
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= 'From: '.$fromEmail.'<'.$fromEmail.'>' . "\r\n".'Reply-To: '.$fromEmail."\r\n" . 'X-Mailer: PHP/' . phpversion();
+    $message = '<!doctype html>
+			<html lang="en">
+			<head>
+				<meta charset="UTF-8">
+				<meta name="viewport"
+					  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+				<meta http-equiv="X-UA-Compatible" content="ie=edge">
+				<title>Document</title>
+			</head>
+			<body>
+			<span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">'.$message.'</span>
+				<div class="container">
+                 '.$message.'<br/>
+                    Regards<br/>
+                  '.$fromEmail.'
+				</div>
+			</body>
+			</html>';
+    $result = @mail($to, $subject, $message, $headers);
 
-   
-$headers = "From: " . $from . "\r\n";
-$headers .= "Reply-To: ". $from . "\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-
-    $subject = "You have a message from your Bitmap Photography.";
-
-    $logo = 'img/logo.png';
-    $link = '#';
-
-	$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
-	$body .= "<table style='width: 100%;'>";
-	$body .= "<thead style='text-align: center;'><tr><td style='border:none;' colspan='2'>";
-	$body .= "<a href='{$link}'><img src='{$logo}' alt=''></a><br><br>";
-	$body .= "</td></tr></thead><tbody><tr>";
-	$body .= "<td style='border:none;'><strong>Name:</strong> {$name}</td>";
-	$body .= "<td style='border:none;'><strong>Email:</strong> {$from}</td>";
-	$body .= "</tr>";
-	$body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$csubject}</td></tr>";
-	$body .= "<tr><td></td></tr>";
-	$body .= "<tr><td colspan='2' style='border:none;'>{$cmessage}</td></tr>";
-	$body .= "</tbody></table>";
-	$body .= "</body></html>";
-
-    $send = mail($to, $subject, $body, $headers);
-
-?>
+    echo '<script>alert("Email sent successfully !")</script>';
+    echo '<script>window.location.href="index.php";</script>';
+}
