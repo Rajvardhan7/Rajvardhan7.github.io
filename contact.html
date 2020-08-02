@@ -111,7 +111,7 @@
                         <style>
                                 .google-maps {
                                     position: relative;
-                                    padding-bottom: 75%; // This is the aspect ratio
+                                    padding-bottom: 75%;
                                     height: 0;
                                     overflow: hidden;
                                 }
@@ -136,7 +136,7 @@
                         <h2 class="contact-title">Get in Touch</h2>
                     </div>
                     <div class="col-lg-8">
-                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="form-contact contact_form" action="contact_process.php" method="post"  >
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
@@ -160,7 +160,7 @@
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                                <button type="submit" name="sendMailBtn" class="button button-contactForm boxed-btn">Send</button>
                             </div>
                         </form>
                     </div>
