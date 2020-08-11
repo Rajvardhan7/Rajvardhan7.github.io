@@ -2699,17 +2699,37 @@ hr {
 
 @media (max-width: 575px) {
     .main-header .logo .small-logo {
-        display: unset
+        display: block;
+        width: 150px !important;
     }
 }
 
 @media (max-width: 575px) {
     .main-header .logo .big-logo {
-        display: none
+        display: none !important;
     }
 }
 
-@media (max-width: 40em) {
+@media (max-width: 990px) {
+    .main-header .logo {
+        height: 50px;
+        width: 150px !important;
+    }
+    .main-header .logo .big-logo {
+        display: block;
+        /* resize: both;
+        overflow: auto; */
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 990px) {
+    .main-header .logo .logo-caption {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
     .quote {
         display: none;
     }
@@ -3588,7 +3608,7 @@ hr {
 }
 
 .single-team .team-img img {
-    width: 100%;
+    width: auto;
     height: auto;
     object-fit: cover;
     transform: scale(1);
