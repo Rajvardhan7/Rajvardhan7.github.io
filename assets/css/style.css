@@ -3007,8 +3007,9 @@ hr {
 
 @media (max-width: 575px) {
     .slider-area .hero__caption .stock-text h2 {
-        font-size: 27px;
-        margin-bottom: 25px
+        font-size: 80px !important;
+        margin-bottom: 25px;
+        margin-left: 10%;
     }
 }
 
@@ -3070,7 +3071,8 @@ hr {
     .slider-area .hero__caption .hero-text1 a,
     .slider-area .hero__caption .hero-text2 span,
     .slider-area .hero__caption .hero-text2 a {
-        margin-bottom: 20px
+        padding-top: 25px !important;
+        font-size: 16px !important;
     }
 }
 
@@ -3088,7 +3090,8 @@ hr {
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .slider-area .hero__caption .hero-text2 {
-        margin-top: 50px
+        margin-top: 50px;
+        margin-left: -5%;
     }
 }
 
@@ -3441,7 +3444,7 @@ hr {
 }
 
 .support-company-area .support-wrapper .right-content .right-img img {
-    width: 100%
+    width: 100% !important;
 }
 
 .support-company-area .support-wrapper .right-content .support-img-cap {
