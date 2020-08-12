@@ -2545,6 +2545,18 @@ hr {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .bluebar {
+        height: 70px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .bluebar-mob {
+        height: 80px !important;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
     .header-area .header-bottom {
         padding: 10px 50px
     }
@@ -2729,7 +2741,7 @@ hr {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 990px) {
     .quote {
         display: none;
     }
@@ -2775,7 +2787,7 @@ hr {
 }
 
 .header-sticky ul li a {
-    padding: 10px 19px
+    padding: 10px 19px;
 }
 
 .header-sticky.sticky-bar.sticky .main-menu ul>li>a {
