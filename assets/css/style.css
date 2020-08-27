@@ -2747,6 +2747,12 @@ hr {
     }
 }
 
+@media (max-width: 990px) {
+    .serv_img {
+        width: 100% !important;
+    }
+}
+
 .main-header ul>li:hover>ul.submenu {
     visibility: visible;
     opacity: 1;
