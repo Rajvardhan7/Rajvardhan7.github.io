@@ -3628,13 +3628,6 @@ hr {
     margin-bottom: 19px
 }
 
-.single-team .team-img img {
-    height: auto;
-    object-fit: cover;
-    transform: scale(1);
-    transition: all 0.6s ease-out 0s
-}
-
 .single-team .team-caption span {
     color: #ff5f13;
     font-size: 14px;
