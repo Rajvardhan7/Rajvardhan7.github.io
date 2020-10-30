@@ -3629,7 +3629,6 @@ hr {
 }
 
 .single-team .team-img img {
-    width: auto;
     height: auto;
     object-fit: cover;
     transform: scale(1);
